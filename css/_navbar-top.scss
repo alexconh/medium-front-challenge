@@ -1,0 +1,24 @@
+.top-bar{
+    @include flex-box(row, space-between, center, nowrap);
+    height: 50px;
+    box-shadow:8px 0 6px 3px $light-gray;
+    background-color: white;
+    padding:20px;
+    .medium-logo{
+        width:2.5rem;
+    }
+    .top-group{
+        @include flex-box(row, space-between, center, nowrap);
+        a{
+            margin: 0 10px;
+            color:#24984A;
+            text-decoration: none;
+            font-size: smaller;
+        }
+        .notifications-top-box{
+            width:35px;
+            height:35px;
+            border: 1px solid $light-gray;
+        }
+    }
+}
