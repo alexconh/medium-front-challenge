@@ -1,6 +1,6 @@
-@import 'aside';
-
-
-.medium-logo {
-    width: 2rem;
+@import 'style-guide';
+@import 'mixins';
+@import 'sidebar';
+*{
+    box-sizing: border-box;
 }
