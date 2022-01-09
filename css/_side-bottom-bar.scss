@@ -5,6 +5,65 @@
     .bottom-group{
         margin: 10px;
         @include flex-box(row, space-around, center, nowrap);
+        svg{
+            .home-icon2{
+                stroke:gray;
+            }
+            .home-icon{
+                stroke:gray;
+            }
+            .search-icon{
+                stroke:none;
+                fill:gray;
+            }
+            .saved-icon2{
+                stroke:gray;
+            }
+            .saved-icon{
+                stroke:gray;
+            }
+        }
+        input[id="search"]{
+            display: none;
+            &:checked + label{
+                svg{
+                    .search-icon{
+                        fill:$green-accent;
+                    }
+                }
+            }
+        }
+        input[id="home"]{
+            display: none;
+            &:checked + label{
+                svg{
+                    .home-icon2{
+                        stroke:$green-accent;
+                        fill:$green-accent;
+                    }
+                    .home-icon{
+                        stroke:$green-accent;
+                    }
+                }
+            }
+        }
+        input[id="saved"]{
+            display: none;
+            &:checked + label{
+                svg{
+                    .saved-icon2{
+                        stroke:$green-accent;
+                        fill:$green-accent;
+                    }
+                    .saved-icon{
+                        stroke:$green-accent;
+                    }
+                }
+            }
+        }
+        label{
+            cursor: pointer;
+        }
     }
     .avatar{
         color: white;

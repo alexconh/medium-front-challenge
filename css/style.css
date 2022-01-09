@@ -11,6 +11,51 @@
   align-items: center;
   flex-wrap: nowrap;
 }
+.bottom-side .bottom-group svg .home-icon2 {
+  stroke: gray;
+}
+.bottom-side .bottom-group svg .home-icon {
+  stroke: gray;
+}
+.bottom-side .bottom-group svg .search-icon {
+  stroke: none;
+  fill: gray;
+}
+.bottom-side .bottom-group svg .saved-icon2 {
+  stroke: gray;
+}
+.bottom-side .bottom-group svg .saved-icon {
+  stroke: gray;
+}
+.bottom-side .bottom-group input[id=search] {
+  display: none;
+}
+.bottom-side .bottom-group input[id=search]:checked + label svg .search-icon {
+  fill: #41872d;
+}
+.bottom-side .bottom-group input[id=home] {
+  display: none;
+}
+.bottom-side .bottom-group input[id=home]:checked + label svg .home-icon2 {
+  stroke: #41872d;
+  fill: #41872d;
+}
+.bottom-side .bottom-group input[id=home]:checked + label svg .home-icon {
+  stroke: #41872d;
+}
+.bottom-side .bottom-group input[id=saved] {
+  display: none;
+}
+.bottom-side .bottom-group input[id=saved]:checked + label svg .saved-icon2 {
+  stroke: #41872d;
+  fill: #41872d;
+}
+.bottom-side .bottom-group input[id=saved]:checked + label svg .saved-icon {
+  stroke: #41872d;
+}
+.bottom-side .bottom-group label {
+  cursor: pointer;
+}
 .bottom-side .avatar {
   color: white;
   background-color: #41872d;
@@ -89,6 +134,108 @@
   width: 35px;
   height: 35px;
   border: 1px solid #f2f2f2;
+}
+
+.aside-right {
+  width: 390px;
+  border-left: 1px solid #f2f2f2;
+}
+.aside-right .aside-head .btn {
+  font-size: smaller;
+}
+.aside-right .aside-head .input-group .input-search-icon {
+  background-color: white;
+  border-radius: 2.5rem;
+  border: 1px solid #f2f2f2;
+}
+.aside-right .aside-head .input-group .input-search {
+  border-radius: 2.5rem;
+  border: 1px solid #f2f2f2;
+  border-left: none;
+}
+.aside-right .aside-head .input-group .input-search::-moz-placeholder {
+  font-size: smaller;
+}
+.aside-right .aside-head .input-group .input-search:-ms-input-placeholder {
+  font-size: smaller;
+}
+.aside-right .aside-head .input-group .input-search::placeholder {
+  font-size: smaller;
+}
+.aside-right .aside-twitter {
+  width: 80%;
+  margin: 0 auto;
+}
+.aside-right .aside-twitter .twitter-icon {
+  fill: #00acee;
+}
+.aside-right .aside-twitter .aside-twitter-logos .medium-logo {
+  width: 2.5rem;
+}
+.aside-right .aside-twitter .aside-twitter-logos .twitter-icon {
+  fill: #00acee;
+}
+.aside-right .aside-twitter .aside-twitter-logos .plus-icon {
+  stroke: #f2f2f2;
+}
+.aside-right .aside-twitter .btn {
+  font-size: smaller;
+  color: black;
+  background-color: white;
+  border: 1px solid gray;
+}
+.aside-right .aside-twitter .btn:hover {
+  border: 0.8px solid black;
+}
+.aside-right .aside-twitter a {
+  color: gray;
+  font-size: smaller;
+}
+.aside-right .aside-divider {
+  width: 75%;
+  height: 1px;
+  color: lightgray;
+  margin: 0 auto;
+}
+.aside-right .aside-recommended-topics .aside-topic-list .btn {
+  font-size: smaller;
+  background-color: #f2f2f2;
+  color: black;
+}
+.aside-right .aside-recommended-topics .aside-topic-list .btn:hover {
+  background-color: #e6e6e6;
+}
+.aside-right .aside-follow .card-follow .follow-info .follow-user-name {
+  color: black;
+}
+.aside-right .aside-follow .card-follow .follow-info .follow-user-info {
+  font-size: smaller;
+  color: gray;
+}
+.aside-right .aside-reading .reading-list-info {
+  color: gray;
+  font-size: smaller;
+}
+.aside-right .aside-reading .reading-list-info .save-icon {
+  stroke: lightgray;
+}
+.aside-right .aside-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  border-top: 1px solid #f2f2f2;
+}
+.aside-right .aside-footer .aside-footer-list {
+  height: 100%;
+  list-style-type: none;
+}
+.aside-right .aside-footer .aside-footer-list a {
+  text-decoration: none;
+  font-size: x-small;
+  color: gray;
+  font-weight: lighter;
 }
 
 * {

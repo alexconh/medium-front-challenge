@@ -25,8 +25,15 @@
           </svg>
           <div class="top-group">
             <a href="" class="d-flex d-md-none">Open in app</a>
-            <div class="notifications-top-box rounded-circle d-flex justify-content-center align-items-center">
-              <svg width="25" height="25" viewBox="-293 409 25 25" class="notifications-top">
+            <div
+              class="notifications-top-box rounded-circle d-flex justify-content-center align-items-center"
+            >
+              <svg
+                width="25"
+                height="25"
+                viewBox="-293 409 25 25"
+                class="notifications-top"
+              >
                 <path
                   d="M-273.33 423.67l-1.67-1.52v-3.65a5.5 5.5 0 0 0-6.04-5.47 5.66 5.66 0 0 0-4.96 5.71v3.41l-1.68 1.55a1 1 0 0 0-.32.74V427a1 1 0 0 0 1 1h3.49a3.08 3.08 0 0 0 3.01 2.45 3.08 3.08 0 0 0 3.01-2.45h3.49a1 1 0 0 0 1-1v-2.59a1 1 0 0 0-.33-.74zm-7.17 5.63c-.84 0-1.55-.55-1.81-1.3h3.62a1.92 1.92 0 0 1-1.81 1.3zm6.35-2.45h-12.7v-2.35l1.63-1.5c.24-.22.37-.53.37-.85v-3.41a4.51 4.51 0 0 1 3.92-4.57 4.35 4.35 0 0 1 4.78 4.33v3.65c0 .32.14.63.38.85l1.62 1.48v2.37z"
                 ></path>
@@ -38,8 +45,9 @@
           <!-- side and bottom navigation bars -->
           <div class="bottom-group d-flex d-lg-none">
             <!-- icons bottombar -->
+            <input type="radio" name="nav-bottom" id="home">
+            <label for="home">
             <svg
-              class="home-icon"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -48,30 +56,37 @@
             >
               <path
                 d="M4.5 21.25V10.87c0-.07.04-.15.1-.2l7.25-5.43a.25.25 0 0 1 .3 0l7.25 5.44c.06.04.1.12.1.2v10.37c0 .14-.11.25-.25.25h-4.5a.25.25 0 0 1-.25-.25v-5.5a.25.25 0 0 0-.25-.25h-4.5a.25.25 0 0 0-.25.25v5.5c0 .14-.11.25-.25.25h-4.5a.25.25 0 0 1-.25-.25z"
-                fill="currentColor"
                 stroke="currentColor"
                 stroke-linejoin="round"
+                class="home-icon2"
               ></path>
               <path
                 d="M22 9l-9.1-6.83a1.5 1.5 0 0 0-1.8 0L2 9"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                class="home-icon"
               ></path>
             </svg>
+          </label>
+          <input type="radio" name="nav-bottom" id="search">
+            <label for="search">
             <svg
-              class="search-icon d-flex"
+              class="d-flex"
               width="25"
               height="25"
               viewBox="0 0 25 25"
               fill="rgba(8, 8, 8, 1)"
             >
               <path
+              class="search-icon"
                 d="M20.07 18.93l-4.16-4.15a6 6 0 1 0-.88.88l4.15 4.16a.62.62 0 1 0 .89-.89zM6.5 11a4.75 4.75 0 1 1 9.5 0 4.75 4.75 0 0 1-9.5 0z"
               ></path>
             </svg>
+          </label>
+          <input type="radio" name="nav-bottom" id="saved">
+            <label for="saved">
             <svg
-              class="saved-icon"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -82,13 +97,16 @@
                 d="M4.5 6.25V21c0 .2.24.32.4.2l5.45-4.09a.25.25 0 0 1 .3 0l5.45 4.09c.16.12.4 0 .4-.2V6.25a.25.25 0 0 0-.25-.25H4.75a.25.25 0 0 0-.25.25z"
                 stroke="currentColor"
                 stroke-linecap="round"
+                class=saved-icon2
               ></path>
               <path
                 d="M8 6V3.25c0-.14.11-.25.25-.25h11.5c.14 0 .25.11.25.25V16.5"
                 stroke="currentColor"
                 stroke-linecap="round"
+                class="saved-icon"
               ></path>
             </svg>
+            </label>
             <div class="avatar rounded-circle">A</div>
           </div>
           <div class="side-group d-none d-lg-flex">
@@ -202,7 +220,7 @@
             <div class="avatar rounded-circle">A</div>
           </div>
         </div>
-        <div class="col-12 col-lg-8 offset-lg-1">
+        <main class="posts col-12 col-lg offset-lg-1">
           <!-- aquí van las cards -->
           <div class="card" style="width: 18rem">
             <div class="card-body">
@@ -276,8 +294,194 @@
               <a href="#" class="card-link">Another link</a>
             </div>
           </div>
-        </div>
-        <aside class="col-3 d-none d-lg-flex bg-secondary">aside-right</aside>
+        </main>
+        <aside class="col-4 d-none d-lg-flex flex-column aside-right p-0">
+          <!-- right aside -->
+          <div class="aside-head d-flex flex-column gap-4 p-4 px-5 mt-4">
+            <!-- upgrade search -->
+            <button type="button" class="btn btn-dark rounded-pill fw-lighter">
+              Upgrade
+            </button>
+            <div class="input-group input-group-md flex-nowrap mt-3">
+              <span
+                class="input-group-text input-search-icon px-2"
+                id="addon-wrapping"
+              >
+                <svg
+                  class="search-icon"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="rgba(8, 8, 8, 1)"
+                >
+                  <path
+                    d="M20.07 18.93l-4.16-4.15a6 6 0 1 0-.88.88l4.15 4.16a.62.62 0 1 0 .89-.89zM6.5 11a4.75 4.75 0 1 1 9.5 0 4.75 4.75 0 0 1-9.5 0z"
+                  ></path>
+                </svg>
+              </span>
+              <input
+                type="text"
+                class="form-control input-search px-0 fw-lighter"
+                placeholder="Search"
+                aria-label="Username"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+          </div>
+          <section class="aside-twitter d-flex flex-column px-5 py-3">
+            <!-- twitter section -->
+            <div
+              class="aside-twitter-logos d-flex justify-content-center align-items-center"
+            >
+              <svg viewBox="0 0 1043.63 592.71" class="medium-logo">
+                <g data-name="Layer 2">
+                  <g data-name="Layer 1">
+                    <path
+                      d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+              <svg class="plus-icon" width="19" height="19" class="cm">
+                <path
+                  d="M9 9H3v1h6v6h1v-6h6V9h-6V3H9v6z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+              <svg class="twitter-icon" width="29" height="29" class="iu">
+                <path
+                  d="M22.05 7.54a4.47 4.47 0 0 0-3.3-1.46 4.53 4.53 0 0 0-4.53 4.53c0 .35.04.7.08 1.05A12.9 12.9 0 0 1 5 6.89a5.1 5.1 0 0 0-.65 2.26c.03 1.6.83 2.99 2.02 3.79a4.3 4.3 0 0 1-2.02-.57v.08a4.55 4.55 0 0 0 3.63 4.44c-.4.08-.8.13-1.21.16l-.81-.08a4.54 4.54 0 0 0 4.2 3.15 9.56 9.56 0 0 1-5.66 1.94l-1.05-.08c2 1.27 4.38 2.02 6.94 2.02 8.3 0 12.86-6.9 12.84-12.85.02-.24 0-.43 0-.65a8.68 8.68 0 0 0 2.26-2.34c-.82.38-1.7.62-2.6.72a4.37 4.37 0 0 0 1.95-2.51c-.84.53-1.81.9-2.83 1.13z"
+                ></path>
+              </svg>
+            </div>
+            <p class="text-center my-3">
+              Discover Medium writers you already follow on Twitter.
+            </p>
+            <button type="button" class="btn btn-md rounded-pill">
+              <svg class="twitter-icon" width="29" height="29" class="iu">
+                <path
+                  d="M22.05 7.54a4.47 4.47 0 0 0-3.3-1.46 4.53 4.53 0 0 0-4.53 4.53c0 .35.04.7.08 1.05A12.9 12.9 0 0 1 5 6.89a5.1 5.1 0 0 0-.65 2.26c.03 1.6.83 2.99 2.02 3.79a4.3 4.3 0 0 1-2.02-.57v.08a4.55 4.55 0 0 0 3.63 4.44c-.4.08-.8.13-1.21.16l-.81-.08a4.54 4.54 0 0 0 4.2 3.15 9.56 9.56 0 0 1-5.66 1.94l-1.05-.08c2 1.27 4.38 2.02 6.94 2.02 8.3 0 12.86-6.9 12.84-12.85.02-.24 0-.43 0-.65a8.68 8.68 0 0 0 2.26-2.34c-.82.38-1.7.62-2.6.72a4.37 4.37 0 0 0 1.95-2.51c-.84.53-1.81.9-2.83 1.13z"
+                ></path>
+              </svg>
+              Connect to Twitter
+            </button>
+            <a class="align-self-center mt-3" href="">Maybe Later</a>
+          </section>
+          <hr class="aside-divider my-4" />
+          <section
+            class="aside-recommended-topics d-flex flex-column px-5 pb-5 pt-1"
+          >
+            <!-- recommended topics -->
+            <p class="fw-bolder">Recommended Topics</p>
+            <div class="aside-topic-list d-flex flex-row flex-wrap gap-2">
+              <button type="button" class="btn rounded-pill">Technology</button>
+              <button type="button" class="btn rounded-pill">Health</button>
+              <button type="button" class="btn rounded-pill">Money</button>
+              <button type="button" class="btn rounded-pill">Business</button>
+              <button type="button" class="btn rounded-pill">
+                Productivity
+              </button>
+              <button type="button" class="btn rounded-pill">Art</button>
+              <button type="button" class="btn rounded-pill">Psychology</button>
+              <button type="button" class="btn rounded-pill">
+                Mindfulness
+              </button>
+            </div>
+          </section>
+          <section class="aside-follow d-flex flex-column px-5">
+            <!-- who to follow  -->
+            <p class="fw-bolder">Who to Follow</p>
+            <article class="card-follow d-flex align-items-center mb-3">
+              <a href="" class="me-3">
+                <img
+                  class="follow-img rounded-circle"
+                  src="https://i.pravatar.cc/50"
+                  alt=""
+                />
+              </a>
+              <a class="text-decoration-none follow-info me-3" href="">
+                <div class="d-flex flex-column">
+                  <p class="fw-bolder mb-0 follow-user-name">Will Tech</p>
+                  <p class="fw-lighter follow-user-info">
+                    Writter, blogger, activist...
+                  </p>
+                </div>
+              </a>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-dark rounded-pill"
+              >
+                Follow
+              </button>
+            </article>
+            <article class="card-follow d-flex align-items-center mb-3">
+              <a href="" class="me-3">
+                <img
+                  class="follow-img rounded-circle"
+                  src="https://i.pravatar.cc/50"
+                  alt=""
+                />
+              </a>
+              <a class="text-decoration-none follow-info me-3" href="">
+                <div class="d-flex flex-column">
+                  <p class="fw-bolder mb-0 follow-user-name">Will Tech</p>
+                  <p class="fw-lighter follow-user-info">
+                    Writter, blogger, activist...
+                  </p>
+                </div>
+              </a>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-dark rounded-pill"
+              >
+                Follow
+              </button>
+            </article>
+            <article class="card-follow d-flex align-items-center mb-3">
+              <a href="" class="me-3">
+                <img
+                  class="follow-img rounded-circle"
+                  src="https://i.pravatar.cc/50"
+                  alt=""
+                />
+              </a>
+              <a class="text-decoration-none follow-info me-3" href="">
+                <div class="d-flex flex-column">
+                  <p class="fw-bolder mb-0 follow-user-name">Will Tech</p>
+                  <p class="fw-lighter follow-user-info">
+                    Writter, blogger, activist...
+                  </p>
+                </div>
+              </a>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-dark rounded-pill"
+              >
+                Follow
+              </button>
+            </article>
+          </section>
+          <section class="aside-reading px-5 mt-2">
+            <!-- reading list -->
+            <p class="fw-bolder">Reading List</p>
+            <p class="reading-list-info">Click the <svg class="save-icon" width="25" height="25" viewBox="0 0 25 25" fill="none" class="ne"><path d="M18 2.5a.5.5 0 0 1 1 0V5h2.5a.5.5 0 0 1 0 1H19v2.5a.5.5 0 1 1-1 0V6h-2.5a.5.5 0 0 1 0-1H18V2.5zM7 7a1 1 0 0 1 1-1h3.5a.5.5 0 0 0 0-1H8a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V7z" fill="#292929"></path></svg>
+              on any story to easily add it to your reading list or a custom list that you can share.</p>
+          </section>
+          <!-- footer -->
+          <footer class="aside-footer">
+            <ul class="aside-footer-list d-flex align-items-center p-0 ms-3">
+              <li class="ms-2"><a href="">Help</a></li>
+              <li class="ms-2"><a href="">Status</a></li>
+              <li class="ms-2"><a href="">Writers</a></li></li>
+              <li class="ms-2"><a href="">Blogs</a></li>
+              <li class="ms-2"><a href="">Careers</a></li>
+              <li class="ms-2"><a href="">Privacy</a></li>
+              <li class="ms-2"><a href="">Terms</a></li>
+              <li class="ms-2"><a href="">About</a></li>
+              <li class="ms-2"><a href="">Knowable</a></li>
+            </ul>
+          </footer>
+        </aside>
       </div>
     </div>
     <script

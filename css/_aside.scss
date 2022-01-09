@@ -1,0 +1,113 @@
+.aside-right{
+    width:390px;
+    border-left: 1px solid $light-gray;
+    .aside-head{
+        .btn{
+            font-size: smaller;
+        }
+        .input-group{
+            .input-search-icon{
+                background-color: white;
+                border-radius: 2.5rem;
+                border:1px solid $light-gray;
+            }
+            .input-search{
+                border-radius: 2.5rem;
+                border:1px solid $light-gray;
+                border-left: none;
+                &::placeholder{
+                    font-size: smaller;
+                }
+            }
+        }
+    }
+    .aside-twitter{
+        width:80%;
+        margin:0 auto;
+        .twitter-icon{
+            fill:#00acee;
+        }
+        .aside-twitter-logos{
+            .medium-logo{
+                width:2.5rem;
+            }
+            .twitter-icon{
+                fill:#00acee;
+            }
+            .plus-icon{
+                stroke:$light-gray;
+            }
+        }
+        .btn{
+            font-size: smaller;
+            color: black;
+            background-color: white;
+            border:1px solid gray;
+            &:hover{
+                border:0.8px solid black;
+            }
+        }
+        a {
+            color:gray;
+            font-size: smaller;
+        }
+    }
+    .aside-divider{
+        width:75%;
+        height: 1px;
+        color: lightgray;
+        margin: 0 auto;
+    }
+    .aside-recommended-topics{
+        .aside-topic-list{
+            .btn{
+                font-size: smaller;
+                background-color: $light-gray;
+                color:black; 
+                &:hover{
+                    background-color: $light-gray-active;
+                }
+            }
+        }
+    }
+    .aside-follow{
+        .card-follow{
+            .follow-info{
+                .follow-user-name{
+                    color:black;
+                }
+                .follow-user-info{
+                    font-size:smaller;
+                    color: gray;
+                }
+            }
+        }
+    }
+    .aside-reading{
+        .reading-list-info{
+            color:gray;
+            font-size: smaller;
+            .save-icon{
+                stroke:lightgray;
+            }
+        }
+    }
+    .aside-footer{
+        position:fixed;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        border-top:1px solid $light-gray;
+        .aside-footer-list{
+            height: 100%;
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                font-size: x-small;
+                color: gray;
+                font-weight: lighter;
+            }
+        }
+    }
+}
