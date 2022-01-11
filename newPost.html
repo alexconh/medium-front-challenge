@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="container">
+        <nav class="col-12 p-3 d-flex bg-secundary justify-content-between">
+            <div class="col-6">
+                <svg class="fb-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" class="bx xw"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 27a12 12 0 1 0 0-24 12 12 0 0 0 0 24zm-1.23-6.03V15.6H12v-2.15h1.77v-1.6C13.77 10 14.85 9 16.42 9c.75 0 1.4.06 1.58.08v1.93h-1.09c-.85 0-1.02.43-1.02 1.05v1.38h2.04l-.27 2.15H15.9V21l-2.13-.03z" fill="#292929"></path></svg>
+            </div>
+            <div class="col-6">
+            <a href="">Open in App</a>
+            </div>
+        </nav>
+    </header>
+    
+
+        <form action="" method="POST" class="container d-flex flex-wrap">
+            <div class="alert alert-success d-none" id="alert__response" role="alert">
+                Post creado exitosamente con el id <strong id="post__id"></strong>
+            </div>
+            <div class="mb-3 col-5">
+                <label for="title" class="form-label">
+                    <svg class="plus-icon" width="19" height="19" class="cm"><path d="M9 9H3v1h6v6h1v-6h6V9h-6V3H9v6z" fill-rule="evenodd"></path></svg>
+                    Titulo</label>
+                <input type="text" class="form-control" id="title" placeholder="Title">
+            </div>
+            <div class="mb-3 col-5">
+                <label for="author" class="form-label">Autor</label>
+                <input type="text" class="form-control" id="author" placeholder="jorge l">
+            </div>
+            <div class="mb-3 col-10">
+                <label for="resume" class="form-label">Cuerpo del Post</label>
+                <textarea class="form-control" id="resume" placeholder="Tell youre story..."></textarea>
+            </div>
+
+            <div class="mb-3 col-4">
+                <label for="timetoread" class="form-label">Tiempo de lectura</label>
+                <input class="form-control" id="timetoread" rows="3"></input>
+            </div>
+
+            <div class="mb-3 col-4">
+                <label for="creationdate" class="form-label">Fecha de creacion</label>
+                <input class="form-control" type="datetime-local" name="datetime" id="creationdate" rows="3">
+            </div>
+
+            <div class="mb-3 col-5">
+                <label for="primaryimg" class="form-label">Imagen Destacada</label>
+                <input class="form-control"type="file" name="imagen" id="primaryimg" rows="3" />
+            </div>
+
+            <div class="mb-3 col-10 d-flex justify-content-center">
+                <button type="button" class="btn btn-primary" id="send__post">Guardar post</button>
+            </div>
+        </form>
+
+        <div id="prueba">
+
+        </div>
+
+    <script src="js/newPostFetch.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
