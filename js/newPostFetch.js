@@ -11,6 +11,13 @@ let objPost= {
 }
 */
 
+var today = new Date();
+var todayDate = ` ${today.toLocaleDateString()} ${today.toLocaleTimeString()} ${today}`
+// var dd = today.getDate();
+// var mm = today.getMonth() + 1; //January is 0!
+// var yyyy = today.getFullYear();
+
+
 const createPost =  (objPost) => {
 
     fetch('https://medium-challenge-default-rtdb.firebaseio.com/post/.json', {
@@ -25,12 +32,14 @@ const createPost =  (objPost) => {
     })
         .then( ( response ) => {
         if(response.target.status === 200){
+            
             document.querySelector('#title').value = ''
             document.querySelector('#author').value = ''
             document.querySelector('#resume').value = ''
             document.querySelector('#timetoread').value = ''
             document.querySelector('#creationdate').value = ''
             document.querySelector('#primaryimg').value = ''
+
             let res = JSON.parse(data.target.response )
             let idPost = res.name
             document.getElementById('post__id').innerText = idPost
@@ -41,11 +50,13 @@ const createPost =  (objPost) => {
 let send__post = document.querySelector('#send__post')
 send__post.addEventListener('click', () => {
 
+
+
     let title = document.querySelector('#title').value
     let author = document.querySelector('#author').value
     let resume = document.querySelector('#resume').value
     let timetoread = document.querySelector('#timetoread').value
-    let creationdate = document.querySelector('#creationdate').value
+    //    let creationdate = document.querySelector('#creationdate').value
     let primaryimg = document.querySelector('#primaryimg').value
 
     
@@ -61,8 +72,8 @@ send__post.addEventListener('click', () => {
             title: title,
             author: author,
             resume: resume,
-            timetoread: timetoread,
-            creationdate: creationdate,
+            timetoread: `${timetoread} min`,
+            creationdate: todayDate,
             primaryimg: primaryimg
 
         }

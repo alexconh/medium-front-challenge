@@ -45,19 +45,30 @@
                 <textarea class="form-control" id="resume" placeholder="Tell youre story..."></textarea>
             </div>
 
-            <div class="mb-3 col-4">
+            <div class="mb-3 col-3">
                 <label for="timetoread" class="form-label">Tiempo de lectura</label>
-                <input class="form-control" id="timetoread" rows="3"></input>
+                <input type="number" min="1" max="60" class="form-control" id="timetoread" rows="3"></input>
             </div>
 
-            <div class="mb-3 col-4">
+            <div class="mb-3 col-3">
+                <label for="topic" class="col-12 text-center">Select the topic</label>
+                <select name="transporte" class="col-10 ms-4" id="topic">
+                    <option id="topic-tech">Technology</option>
+                    <option id="topic-fin">Finance</option>
+                    <option id="topic-health">Health</option>
+                    <option id="topic-mind"> Mindfulness</option>
+                    <option id="topic-art">Art</option>                
+                </select>
+            </div>
+
+            <!-- <div class="mb-3 col-4">
                 <label for="creationdate" class="form-label">Fecha de creacion</label>
                 <input class="form-control" type="datetime-local" name="datetime" id="creationdate" rows="3">
-            </div>
+            </div> -->
 
-            <div class="mb-3 col-5">
+            <div class="mb-3 col-3>
                 <label for="primaryimg" class="form-label">Imagen Destacada</label>
-                <input class="form-control"type="file" name="imagen" id="primaryimg" rows="3" />
+                <input class="form-control"type="text" name="imagen" id="primaryimg" rows="3" />
             </div>
 
             <div class="mb-3 col-10 d-flex justify-content-center">
