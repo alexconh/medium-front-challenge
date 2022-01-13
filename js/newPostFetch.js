@@ -11,11 +11,13 @@ let objPost= {
 }
 */
 
-var today = new Date();
-var todayDate = ` ${today.toLocaleDateString()} ${today.toLocaleTimeString()} ${today}`
-// var dd = today.getDate();
-// var mm = today.getMonth() + 1; //January is 0!
-// var yyyy = today.getFullYear();
+let today = new Date();
+let months = ['Ene','Feb', 'Mar','Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
+let day = today.toLocaleDateString().split('/')[0]
+let year = today.toLocaleDateString().split('/')[2]
+let month = months[parseInt(today.toLocaleDateString().split('/')[1])-1]
+
+let todayDate = `${month} ${day}, ${year}`
 
 
 const createPost =  (objPost) => {
@@ -31,13 +33,14 @@ const createPost =  (objPost) => {
         return response.json
     })
         .then( ( response ) => {
-        if(response.target.status === 200){
+        if(response.status === 200){
             
             document.querySelector('#title').value = ''
             document.querySelector('#author').value = ''
             document.querySelector('#resume').value = ''
             document.querySelector('#timetoread').value = ''
             document.querySelector('#creationdate').value = ''
+            document.querySelector('#topic').value = ''
             document.querySelector('#primaryimg').value = ''
 
             let res = JSON.parse(data.target.response )
@@ -56,6 +59,7 @@ send__post.addEventListener('click', () => {
     let author = document.querySelector('#author').value
     let resume = document.querySelector('#resume').value
     let timetoread = document.querySelector('#timetoread').value
+    let topic = document.querySelector('#topic').value 
     //    let creationdate = document.querySelector('#creationdate').value
     let primaryimg = document.querySelector('#primaryimg').value
 
@@ -65,7 +69,8 @@ send__post.addEventListener('click', () => {
         title !== '' &&
         author !== '' &&  
         timetoread !== '' &&
-        resume !== ''
+        resume !== '' &&
+        primaryimg !== ''
     ){
 
         let objNewPost = {
@@ -74,6 +79,7 @@ send__post.addEventListener('click', () => {
             resume: resume,
             timetoread: `${timetoread} min`,
             creationdate: todayDate,
+            topic : topic,
             primaryimg: primaryimg
 
         }

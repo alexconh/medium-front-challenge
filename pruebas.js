@@ -1,6 +1,5 @@
 const getPost = () => {
     // GET - default
-
     fetch("https://medium-challenge-default-rtdb.firebaseio.com/post/.json")
     .then((res) => {
     return res.json()
@@ -12,8 +11,13 @@ const getPost = () => {
     
     let postsLayout = ''
 
-    for(post in posts) {
-        let { title, timetoread, resume, author, creationdate, primaryimg } = posts[post]
+    let orderedPosts = Object.values(posts).reverse()
+    console.log(orderedPosts)
+
+    
+
+    for(post of orderedPosts) {
+        let { title, timetoread, resume, author, creationdate, primaryimg } = post
         postsLayout += `
         <div class="card col-12">
             <div class="card-header d-flex row justify-content-start align-items-center gap-3 m-0">
