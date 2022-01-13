@@ -358,6 +358,44 @@
   font-weight: lighter;
 }
 
+.lgbuttom {
+  width: 100%;
+  background-color: #909090;
+  color: oldlace;
+  border-radius: 4rem;
+}
+
+.smbuttom {
+  width: 80%;
+  background-color: #909090;
+  color: oldlace;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.asbutton {
+  background-color: #909090;
+  color: white;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.asbutton2 {
+  background-color: #909090;
+  color: white;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.imgas {
+  width: 7rem;
+  height: auto;
+}
+
+.mimg {
+  width: 5rem;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

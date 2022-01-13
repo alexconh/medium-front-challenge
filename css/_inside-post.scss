@@ -1,13 +1,37 @@
 .lgbuttom {
     width: 100%;
-    background-color: rgb(54, 165, 54);
+    background-color: rgb(144, 144, 144);
     color: oldlace;  
     border-radius: 4rem;  
 }
 
 .smbuttom {
-    width: 100%;
-    background-color: rgb(54, 165, 54);
+    width: 80%;
+    background-color: rgb(144, 144, 144);
     color: oldlace;
-    
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.asbutton {
+    background-color: rgb(144, 144, 144);
+    color: rgb(255, 255, 255);
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.asbutton2 {
+    background-color: rgb(144, 144, 144);
+    color: rgb(255, 255, 255);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.imgas{
+    width: 7rem;
+    height: auto;
+}
+
+.mimg {
+    width: 5rem;
 }
