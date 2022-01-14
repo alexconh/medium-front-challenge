@@ -247,6 +247,134 @@
   font-weight: lighter;
 }
 
+@media (min-width: 992px) {
+  main {
+    margin-left: 80px !important;
+  }
+}
+main .main-head p {
+  font-size: smaller;
+  font-weight: lighter;
+  color: gray;
+  margin-right: 10px;
+}
+main .main-head .btn {
+  font-size: smaller;
+  background-color: #f2f2f2;
+  color: black;
+}
+main .main-head .btn:hover {
+  background-color: #e6e6e6;
+}
+main .main-nav {
+  border-bottom: 1px solid #f2f2f2;
+  margin-bottom: 40px;
+}
+main .main-nav ul {
+  padding-left: 0;
+}
+main .main-nav ul li {
+  list-style: none;
+  font-size: smaller;
+}
+main .main-nav ul li:first-of-type {
+  color: gray;
+  font-weight: lighter;
+}
+main .main-cards-container .card {
+  border-radius: 0;
+  border: none;
+  border-bottom: 0.5px solid lightgray;
+  height: 230px;
+}
+main .main-cards-container .card .card-header {
+  background-color: white;
+  border: none;
+}
+main .main-cards-container .card .card-header .card-avatar {
+  width: 25px;
+  height: 25px;
+}
+main .main-cards-container .card .card-header p {
+  font-size: smaller;
+}
+main .main-cards-container .card .card-body .card-body-img {
+  background-size: cover;
+  background-position: center;
+  width: 110px;
+  height: 110px;
+  background-color: red;
+}
+main .main-cards-container .card .card-bottom .btn {
+  height: 20px;
+  font-size: smaller;
+  background-color: #f2f2f2;
+  color: black;
+}
+main .main-cards-container .card .card-bottom .btn:hover {
+  background-color: #e6e6e6;
+}
+main .main-cards-container .card .card-bottom p {
+  font-size: smaller;
+}
+main .main-cards-container .card .card-bottom .card-bottom-icons .save-icon2 {
+  stroke: transparent;
+}
+main .main-cards-container .card .card-bottom .card-bottom-icons input[id=save] {
+  display: none;
+}
+main .main-cards-container .card .card-bottom .card-bottom-icons input[id=save]:checked + label svg .save-icon {
+  display: none;
+}
+main .main-cards-container .card .card-bottom .card-bottom-icons input[id=save]:checked + label svg .save-icon2 {
+  display: block;
+  fill: black;
+}
+main .main-cards-container .card .card-bottom .card-bottom-icons .dropdown .btn-dark {
+  background-color: transparent;
+  border: transparent;
+}
+main .main-cards-container .card .card-bottom .card-bottom-icons .dropdown .btn-dark:focus {
+  border: none;
+  box-shadow: none;
+  outline: 0;
+}
+main .main-cards-container .card .card-bottom .card-bottom-icons .dropdown .btn-dark:active {
+  outline: 0;
+}
+main .main-cards-container .card .card-bottom .card-bottom-icons .dropdown .dropdown-menu li a {
+  font-size: smaller;
+  font-weight: lighter;
+  color: gray;
+}
+main .main-cards-container .card .card-bottom .card-bottom-icons .dropdown .dropdown-menu li a:hover {
+  background-color: white;
+  color: black;
+}
+main .main-cards-container .card .card-bottom .card-bottom-icons .dropdown .dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: calc(50% - 10px);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent white transparent;
+}
+main .main-cards-container .card .card-bottom .card-bottom-icons .dropdown .dropdown-menu::after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  right: calc(50% - 11px);
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 11px 11px 11px;
+  border-color: transparent transparent gray transparent;
+}
+
 * {
   box-sizing: border-box;
 }/*# sourceMappingURL=style.css.map */
