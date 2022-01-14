@@ -126,6 +126,9 @@
 .top-bar .medium-logo {
   width: 2.5rem;
 }
+.top-bar .topbar-left .draft {
+  font-size: smaller;
+}
 .top-bar .top-group {
   display: flex;
   flex-direction: row;
@@ -143,6 +146,74 @@
   width: 35px;
   height: 35px;
   border: 1px solid #f2f2f2;
+}
+.top-bar .top-group .avatar {
+  color: white;
+  background-color: #41872d;
+  width: 30px;
+  height: 30px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.top-bar .top-group .btn-sm {
+  background-color: #41872d;
+  color: white;
+  border: none;
+  height: 30px;
+}
+.top-bar .top-group .dropdown .btn-dark {
+  background-color: transparent;
+  border: transparent;
+}
+.top-bar .top-group .dropdown .btn-dark:focus {
+  border: none;
+  box-shadow: none;
+  outline: 0;
+}
+.top-bar .top-group .dropdown .btn-dark:active {
+  outline: 0;
+}
+.top-bar .top-group .dropdown .dropdown-menu li a {
+  font-size: smaller;
+  font-weight: lighter;
+  color: gray;
+}
+.top-bar .top-group .dropdown .dropdown-menu li a:hover {
+  background-color: transparent;
+  color: black;
+}
+.top-bar .top-group .dropdown .dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: calc(50% - 10px);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent white transparent;
+}
+.top-bar .top-group .dropdown .dropdown-menu::after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  right: calc(50% - 11px);
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 11px 11px 11px;
+  border-color: transparent transparent gray transparent;
+}
+
+@media (min-width: 992px) {
+  .top-bar-write {
+    padding: 0 10vw;
+  }
 }
 
 .aside-right {
@@ -373,6 +444,147 @@ main .main-cards-container .card .card-bottom .card-bottom-icons .dropdown .drop
   border-style: solid;
   border-width: 0 11px 11px 11px;
   border-color: transparent transparent gray transparent;
+}
+
+.new-post-form {
+  margin: 70px auto;
+  height: 75vh;
+}
+.new-post-form .plus-container {
+  border: 1px solid gray;
+  margin-right: 10px;
+}
+.new-post-form .title {
+  border-radius: 0;
+  border: none;
+  height: 50px;
+  border-left: 1px solid lightgray;
+  font-size: xx-large;
+}
+.new-post-form .title::-moz-placeholder {
+  font-size: xx-large;
+}
+.new-post-form .title:-ms-input-placeholder {
+  font-size: xx-large;
+}
+.new-post-form .title::placeholder {
+  font-size: xx-large;
+}
+.new-post-form .title:focus {
+  border: none;
+  border-left: 1px solid lightgray;
+  box-shadow: none;
+  outline: 0;
+}
+.new-post-form .title:active {
+  outline: 0;
+}
+.new-post-form #author {
+  border: none;
+}
+.new-post-form #author::-moz-placeholder {
+  font-size: large;
+  font-style: italic;
+}
+.new-post-form #author:-ms-input-placeholder {
+  font-size: large;
+  font-style: italic;
+}
+.new-post-form #author::placeholder {
+  font-size: large;
+  font-style: italic;
+}
+.new-post-form #author:focus {
+  border: none;
+  box-shadow: none;
+  outline: 0;
+}
+.new-post-form #author:active {
+  outline: 0;
+}
+.new-post-form .form-content {
+  height: 30vh;
+}
+.new-post-form .form-content textarea {
+  border: none;
+}
+.new-post-form .form-content textarea::-moz-placeholder {
+  font-size: large;
+}
+.new-post-form .form-content textarea:-ms-input-placeholder {
+  font-size: large;
+}
+.new-post-form .form-content textarea::placeholder {
+  font-size: large;
+}
+.new-post-form .form-content textarea:focus {
+  border: none;
+  box-shadow: none;
+  outline: 0;
+}
+.new-post-form .form-content textarea:active {
+  outline: 0;
+}
+.new-post-form .form-img {
+  border: none;
+}
+.new-post-form .form-img::-moz-placeholder {
+  font-size: smaller;
+}
+.new-post-form .form-img:-ms-input-placeholder {
+  font-size: smaller;
+}
+.new-post-form .form-img::placeholder {
+  font-size: smaller;
+}
+.new-post-form .form-img:focus {
+  border: none;
+  box-shadow: none;
+  outline: 0;
+}
+.new-post-form .form-img:active {
+  outline: 0;
+}
+.new-post-form .form-time {
+  font-size: smaller;
+  color: gray;
+  margin-left: 10px;
+  min-width: 140px;
+}
+.new-post-form #timetoread {
+  border: none;
+  width: 140px;
+}
+.new-post-form #timetoread:focus {
+  border: none;
+  box-shadow: none;
+  outline: 0;
+}
+.new-post-form #timetoread:active {
+  outline: 0;
+}
+.new-post-form .form-topic {
+  font-size: smaller;
+  color: gray;
+  margin-left: 10px;
+  min-width: 160px;
+}
+.new-post-form #topic {
+  border: none;
+  width: 156px;
+}
+.new-post-form #topic:focus {
+  border: none;
+  box-shadow: none;
+  outline: 0;
+}
+.new-post-form #topic:active {
+  outline: 0;
+}
+@media (min-width: 992px) {
+  .new-post-form {
+    width: 70%;
+  }
 }
 
 * {

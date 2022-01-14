@@ -7,6 +7,11 @@
     .medium-logo{
         width:2.5rem;
     }
+    .topbar-left{
+        .draft{
+            font-size: smaller;
+        }
+    }
     .top-group{
         @include flex-box(row, space-between, center, nowrap);
         a{
@@ -20,5 +25,75 @@
             height:35px;
             border: 1px solid $light-gray;
         }
+        .avatar{
+            color: white;
+            background-color: $green-accent;
+            width: 30px;
+            height: 30px;
+            font-weight: 300;
+            @include flex-box (row, center, center, nowrap);
+        }
+        .btn-sm{
+            background-color:$green-accent;
+            color:white;
+            border:none;
+            height: 30px;
+        }
+        .dropdown{
+            .btn-dark{
+                background-color: transparent;
+                border: transparent;
+                &:focus{
+                    border: none;
+                    box-shadow:none;
+                    outline:0;
+                }
+                &:active{
+                    outline:0;
+                }
+            }
+            .dropdown-menu{
+                li{
+                    a{
+                        font-size: smaller;
+                        font-weight: lighter;
+                        color:gray;
+                    &:hover{
+                        background-color: transparent;
+                        color:black;
+                    }
+                    }
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    right: calc(50% - 10px);
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 10px 10px 10px;
+                    border-color: transparent transparent white transparent;
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: -11px;
+                    right: calc(50% - 11px);
+                    z-index: -1;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 11px 11px 11px;
+                    border-color: transparent transparent gray transparent;
+                }
+            }
+        }
+    }
+}
+.top-bar-write{
+    @media(min-width: 992px){
+        padding: 0 10vw;
+
     }
 }

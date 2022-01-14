@@ -1,0 +1,113 @@
+.new-post-form{
+    margin: 70px auto;
+    height: 75vh;
+    .plus-container{
+        border:1px solid gray;
+        margin-right: 10px;
+    }
+    .title{
+        border-radius: 0;
+        border:none;
+        height: 50px;
+        border-left: 1px solid lightgray;
+        font-size: xx-large;
+        &::placeholder{
+            font-size: xx-large;
+            
+        }
+        &:focus{
+            border: none;
+            border-left: 1px solid lightgray;
+            box-shadow:none;
+            outline:0;
+        }
+        &:active{
+            outline:0;
+        }
+    }
+    #author{
+        border:none;
+        &::placeholder{
+            font-size: large;
+            font-style: italic;
+        }
+        &:focus{
+            border: none;
+            box-shadow:none;
+            outline:0;
+        }
+        &:active{
+            outline:0;
+        }
+    }
+    .form-content{
+        height: 30vh;
+        textarea{
+            border:none;
+            &::placeholder{
+                font-size: large;
+            }
+            &:focus{
+                border: none;
+                box-shadow:none;
+                outline:0;
+            }
+            &:active{
+                outline:0;
+            }
+        }
+    }
+    .form-img{
+        border:none;
+        &::placeholder{
+            font-size: smaller;
+        }
+        &:focus{
+            border: none;
+            box-shadow:none;
+            outline:0;
+        }
+        &:active{
+            outline:0;
+        }
+    }
+    .form-time{
+        font-size: smaller;
+        color:gray;
+        margin-left: 10px;
+        min-width: 140px;
+    }
+    #timetoread{
+        border:none;
+        width:140px;
+        &:focus{
+            border: none;
+            box-shadow:none;
+            outline:0;
+        }
+        &:active{
+            outline:0;
+        }
+    }
+    .form-topic{
+        font-size: smaller;
+        color:gray;
+        margin-left: 10px;
+        min-width: 160px;
+    }
+    #topic{
+        border: none;
+        width:156px;
+        &:focus{
+            border: none;
+            box-shadow:none;
+            outline:0;
+        }
+        &:active{
+            outline:0;
+        }
+    }
+    @media(min-width: 992px){
+        width:70%;
+    }   
+}
