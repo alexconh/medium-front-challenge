@@ -76,7 +76,7 @@ main{
                     .save-icon2{
                         stroke: transparent;
                     }
-                    input[id="save"]{
+                    input[class="save"]{
                         display: none;
                         &:checked + label{
                             svg{

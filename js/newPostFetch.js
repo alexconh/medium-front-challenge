@@ -85,6 +85,10 @@ send__post.addEventListener('click', () => {
         }
     
         createPost(objNewPost)
+        document.querySelector('.success-msg').classList.remove('d-none')
+        setTimeout( () => {
+        location.href = 'index.html'
+        },5000)
     } else {
         alert('Algunos datos estan vacios')
     }
@@ -143,10 +147,7 @@ const getPost = () => {
         
     });
 
-    
-
-    
-
+        
     // DELETE
 
     let idpost = "ID del Post"

@@ -1,6 +1,10 @@
 .aside-right{
     width:390px;
     border-left: 1px solid $light-gray;
+    .inner-aside{
+        position: sticky;
+        bottom:49px;
+    }
     .aside-head{
         .btn{
             font-size: smaller;
