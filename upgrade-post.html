@@ -4,23 +4,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Medium</title>
 </head>
 <body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-12 d-flex fixed-top top-bar top-bar-write justify-content-between">
+                <!-- top navigation bar -->
+                <div class="topbar-left d-flex align-items-center gap-2">
+                    <a href="/index.html">
+                        <svg viewBox="0 0 1043.63 592.71" class="medium-logo">
+                        <path
+                            d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94"
+                        ></path>
+                        </svg>
+                    </a>
+                    <p class="my-0 draft">Draft in Alexandra</p>
+                </div>
+                <div class="top-group gap-3">
+                  <button type="button" class="btn btn-sm rounded-pill" id="update-post">Update</button>
+                  <div class="dropdown">
+                    <!-- dropdown -->
+                    <button class="btn-dark p-0" type="button" id="dropdownMenuButton1" data-bs-offset="-103,5" data-bs-toggle="dropdown" aria-expanded="false">
+                      <svg class="overflow-dots-filled-25px_svg__svgIcon-use" width="25" height="25">
+                        <path d="M5 12.5c0 .55.2 1.02.59 1.41.39.4.86.59 1.41.59.55 0 1.02-.2 1.41-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.59-1.41A1.93 1.93 0 0 0 7 10.5c-.55 0-1.02.2-1.41.59-.4.39-.59.86-.59 1.41zm5.62 0c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.55 0 1.02-.2 1.41-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.59-1.41a1.93 1.93 0 0 0-1.41-.59c-.55 0-1.03.2-1.42.59-.39.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.58 1.41.4.4.87.59 1.43.59.56 0 1.03-.2 1.42-.59.39-.39.58-.86.58-1.41 0-.55-.2-1.02-.58-1.41a1.93 1.93 0 0 0-1.42-.59c-.56 0-1.04.2-1.43.59-.39.39-.58.86-.58 1.41z" fill-rule="evenodd"></path>
+                      </svg>
+                    </button>                 
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item text-muted" href="#">Share draft link</a></li>
+                        <li><a class="dropdown-item text-muted" href="#">Share to Twitter</a></li>
+                        <li><a class="dropdown-item text-muted" href="#">Change featured image</a></li>
+                        <li><a class="dropdown-item text-muted" href="#">Change display title / subtitle</a></li>
+                        <li><a class="dropdown-item text-muted" href="#">Change tags</a></li>
+                        <li><a class="dropdown-item text-muted" href="#">See revision history</a></li>
+                        <li><a class="dropdown-item text-muted" href="#">More settings</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Hints and keybord shortcuts</a></li>
+                        <li><a class="dropdown-item" href="#">More help</a></li>
+                    </ul>
+                </div>
+                <svg
+                    width="25"
+                    height="25"
+                    viewBox="-293 409 25 25"
+                    class="notifications-top"
+                >
+                    <path
+                        d="M-273.33 423.67l-1.67-1.52v-3.65a5.5 5.5 0 0 0-6.04-5.47 5.66 5.66 0 0 0-4.96 5.71v3.41l-1.68 1.55a1 1 0 0 0-.32.74V427a1 1 0 0 0 1 1h3.49a3.08 3.08 0 0 0 3.01 2.45 3.08 3.08 0 0 0 3.01-2.45h3.49a1 1 0 0 0 1-1v-2.59a1 1 0 0 0-.33-.74zm-7.17 5.63c-.84 0-1.55-.55-1.81-1.3h3.62a1.92 1.92 0 0 1-1.81 1.3zm6.35-2.45h-12.7v-2.35l1.63-1.5c.24-.22.37-.53.37-.85v-3.41a4.51 4.51 0 0 1 3.92-4.57 4.35 4.35 0 0 1 4.78 4.33v3.65c0 .32.14.63.38.85l1.62 1.48v2.37z"
+                    >
+                    </path>
+                </svg>
+                <div class="avatar rounded-circle">A</div>
+                </div>
+            </nav>
     
+            <div id="upgrade-post-form" class="new-post-form row">
+                <form action="" method="POST" class="d-flex flex-wrap row">
+                    <!-- <div class="alert alert-success d-none" id="alert__response" role="alert">
+                        Post creado exitosamente con el id <strong id="post__id"></strong>
+                    </div> -->
+                    <div class="col-12 d-flex align-items-center">
+                        <!-- Title -->
+                        <div class="plus-container rounded-circle d-flex align-items-center">
+                            <svg class="plus-icon" width="19" height="19" class="cm"><path d="M9 9H3v1h6v6h1v-6h6V9h-6V3H9v6z" fill-rule="evenodd"></path></svg>
+                        </div>
+                        <input type="text" class="form-control col-11 ms-1 title" id="title" placeholder="Title">
+                    </div>
+                    <div class="col-5 ms-4">
+                        <!-- Author -->
+                        <input type="text" class="form-control" id="author" placeholder="Author">
+                    </div>
+                    <div class="col-12 ms-4 form-content mb-0">
+                        <!-- Post content -->
+                        <textarea class="form-control h-100" id="resume" placeholder="Tell your story ..."></textarea>
+                    </div>
+                    <div class="col-6 ms-4 mb-0">
+                        <!-- Post image -->
+                        <input class="form-control form-img" type="text" name="imagen" id="primaryimg" placeholder="Image URL" />
+                    </div>
+                    <div class="form-time-topic ms-4 d-flex gap-3">
+                        <div class="col-3">
+                            <!-- Time to read -->
+                            <label for="timetoread" class="form-label mb-0 form-time">Tiempo de lectura</label>
+                            <input type="time" min="1" max="60" class="form-control" id="timetoread"></input>
+                        </div>
+                        <div class="col-3">
+                            <!-- Topic -->
+                            <label for="topic" class="col-12 form-topic">Select the main topic</label>
+                            <select name="topic" class="col-10 form-select" id="topic">
+                                <option value="Technology" id="topic-tech">Technology</option>
+                                <option value="Finance" id="topic-fin">Finance</option>
+                                <option value="Health" id="topic-health">Health</option>
+                                <option value="Mindfulness" id="topic-mind"> Mindfulness</option>
+                                <option value="Art" id="topic-art">Art</option>                
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="success-msg d-none">
+                <h3>Se creo el post exitosamente</h3>
+            </div>
+        </div>
+    </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
-    <script 
-    src="/js/upgrade-post-js">
-    </script>
-</body>
+    <script src="/js/upgrade-post.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  </body>
 </html>

@@ -1,4 +1,4 @@
-let = idInsidePost = location.search.slice(8)
+let  idInsidePost = location.search.slice(8)
 
 //Print Inside Post
 const getInsidePost = () => {
@@ -35,9 +35,9 @@ const getInsidePost = () => {
                 <svg class="overflow-dots-filled-25px_svg__svgIcon-use" width="25" height="25"><path d="M5 12.5c0 .55.2 1.02.59 1.41.39.4.86.59 1.41.59.55 0 1.02-.2 1.41-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.59-1.41A1.93 1.93 0 0 0 7 10.5c-.55 0-1.02.2-1.41.59-.4.39-.59.86-.59 1.41zm5.62 0c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.55 0 1.02-.2 1.41-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.59-1.41a1.93 1.93 0 0 0-1.41-.59c-.55 0-1.03.2-1.42.59-.39.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.58 1.41.4.4.87.59 1.43.59.56 0 1.03-.2 1.42-.59.39-.39.58-.86.58-1.41 0-.55-.2-1.02-.58-1.41a1.93 1.93 0 0 0-1.42-.59c-.56 0-1.04.2-1.43.59-.39.39-.58.86-.58 1.41z" fill-rule="evenodd"></path></svg>
             </button>
             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton2">
-              <li><a id="edit-btn" class="dropdown-item" href="#">Edit Post</a></li>
+              <li><a href="upgrade-post.html?idpost=${idInsidePost}" id="edit-btn" class="dropdown-item">Edit Post</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a id="delete-btn" class="dropdown-item" href="#">Delete Post</a></li>
+              <li><a id="delete-btn" class="dropdown-item">Delete Post</a></li>
             </ul>
           </div>
 
@@ -63,7 +63,7 @@ getInsidePost()
 
 //DELETE POST
 
-const deletePost = () => {
+const deletePost = (idInsidePost) => {
     fetch(`https://medium-challenge-default-rtdb.firebaseio.com/post/${idInsidePost}/.json`, {
         method: 'DELETE',
     })
@@ -71,10 +71,17 @@ const deletePost = () => {
     .then( () => {
         setTimeout( () => {
             location.href = 'index.html'
-            },5000)
+            },1000)
     })
     
 }
+
+document.addEventListener('click',function(e){
+    if(e.target && e.target.id== 'delete-btn'){
+        deletePost(idInsidePost)
+     }
+})
+
 
 
 
