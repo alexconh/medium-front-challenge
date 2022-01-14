@@ -132,42 +132,4 @@ updateBtn.addEventListener('click', () => {
     }
 
 })
-
-
-
-
-//-----------------------------------------------------------------------------------
-
-// const updatePost = (idUpgradePost) => {
-//     fetch(`https://medium-challenge-default-rtdb.firebaseio.com/post/${idUpgradePost}/.json`, {
-//         method: 'PATCH',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify({
-//             title: posts.title.value,
-//             author: posts.author.value,
-//             resume: posts.resume.value,
-//             primaryimg: posts.primaryimg.value,
-//             timetoread: posts.timetoread.value,
-//             topic: posts.topic.value
-//         })
-//     })
-//     .then(res => res.json())
-//     .then( () => {
-//         setTimeout( () => {
-//             location.reload()
-//             },1000)
-//     })
-    
-// }
-
-    
-
-//     updateBtn.addEventListener('click', function(e){
-//     if(e.target && e.target.id == 'update__post'){
-//         updatePost(idUpgradePost)
-//     }
-// })
-
-
+getUpgradePost()
