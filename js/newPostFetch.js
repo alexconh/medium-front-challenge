@@ -148,6 +148,7 @@ const getPost = () => {
     
 
     // DELETE
+
     let idpost = "ID del Post"
     fetch(`https://medium-challenge-default-rtdb.firebaseio.com/${idpost}.json`, {
     method: "DELETE"

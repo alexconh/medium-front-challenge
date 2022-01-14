@@ -11,13 +11,13 @@ const getPost = () => {
     
     let postsLayout = ''
 
-    let orderedPosts = Object.values(posts).reverse()
+    let orderedPosts = Object.keys(posts).reverse()
     console.log(orderedPosts)
 
     
 
     for(post of orderedPosts) {
-        let { title, timetoread, resume, author, creationdate, primaryimg } = post
+        let { title, timetoread, resume, author, creationdate, primaryimg } = posts[post]
         postsLayout += `
         <div class="card col-12">
             <div class="card-header d-flex row justify-content-start align-items-center gap-3 m-0">
@@ -32,7 +32,7 @@ const getPost = () => {
             <div class="card-body row align-items-center">
               <h6 class="card-title m-0 col-9 fs-3">${resume}</h6>
               <div class="col-2 p-0">
-                <img class="card-img img-fluid max-width: 100%;" src="${primaryimg}" alt="">  
+                <a href="inside-post.html?idpost=${post}"><img class="card-img img-fluid max-width: 100%;" src="${primaryimg}" alt=""></a>
               </div>
             </div>
             <div class="card-bottom row p-3 py-0">
@@ -56,6 +56,40 @@ const getPost = () => {
     })
 
 
+/*
+Ir por los Post
+*/
+
+window.addEventListener('load', () => {
+
+    let idPost = location.search.slice(8)
+    console.log(idPost)
+    fetch(
+        `https://genjs-292ac-default-rtdb.firebaseio.com/posts/${idPost}.json`,
+        {
+            method: 'GET',
+        }
+    )
+    .then( (response) => {
+        return response.json()
+    })
+    .then( (post) => {
+        document.querySelector('#title').value = post.title
+        document.querySelector('#author').value = post.author
+        document.querySelector('#timetoread').value = post.timetoread
+        document.querySelector('#resume').value = post.resume
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+})
+
+
+
+    /*
+    
+    
+    */
 
 
 
