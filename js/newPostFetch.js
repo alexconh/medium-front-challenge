@@ -147,10 +147,7 @@ const getPost = () => {
         
     });
 
-    
-
-    
-
+        
     // DELETE
 
     let idpost = "ID del Post"
