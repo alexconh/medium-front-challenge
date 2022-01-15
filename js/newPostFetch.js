@@ -88,7 +88,7 @@ send__post.addEventListener('click', () => {
         document.querySelector('.success-msg').classList.remove('d-none')
         setTimeout( () => {
         location.href = 'index.html'
-        },5000)
+        },1000)
     } else {
         alert('Algunos datos estan vacios')
     }

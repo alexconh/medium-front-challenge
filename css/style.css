@@ -596,6 +596,10 @@ main .main-cards-container .card .card-bottom .card-bottom-icons .dropdown .drop
   }
 }
 
+.success-msg {
+  color: #41872d;
+}
+
 .mainheader {
   padding-top: 15rem;
 }
