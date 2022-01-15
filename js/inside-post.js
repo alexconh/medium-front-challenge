@@ -59,7 +59,6 @@ const getInsidePost = () => {
 }
 
 getInsidePost()
-// Get Related 
 
 //DELETE POST
 
