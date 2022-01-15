@@ -33,7 +33,7 @@ const getPost = () => {
                     <p>${resume.slice(0,200)} ...</p>
                     </div>
                     
-                    <a href="inside-post.html?idpost=${post}">
+                    <a href="inside-prueba.html?idpost=${post}">
                     <div class="card-body-img ms-4" style="background-image: url(${primaryimg});">
                     
                     </div>

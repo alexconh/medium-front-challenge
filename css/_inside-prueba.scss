@@ -1,0 +1,121 @@
+.inside-post{
+    @media(min-width:992px){
+        padding-bottom: 0;
+    }
+    .save-icon2{
+        stroke: transparent;
+    }
+    input[class="save"]{
+        display: none;
+        &:checked + label{
+            svg{
+                .save-icon{
+                    display: none;
+                }
+                .save-icon2{
+                    display: block;
+                    fill: black;
+                }
+            } 
+        }
+    }
+    .dropdown{
+        .btn-dark{
+            background-color: transparent;
+            border: transparent;
+            &:focus{
+                border: none;
+                box-shadow:none;
+                outline:0;
+            }
+            &:active{
+                outline:0;
+            }
+        }
+        .dropdown-menu{
+            li{
+                a{
+                    font-size: smaller;
+                    font-weight: lighter;
+                    color:gray;
+                &:hover{
+                    background-color: white;
+                    color:black;
+                }
+            }
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: -10px;
+                right: calc(50% - 10px);
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 10px 10px 10px;
+                border-color: transparent transparent white transparent;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                top: -11px;
+                right: calc(50% - 11px);
+                z-index: -1;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 11px 11px 11px;
+                border-color: transparent transparent gray transparent;
+            }
+        }
+    }
+}
+.inside-footer{
+    background-color: $light-gray;
+    padding-bottom: 80px;
+    @media(min-width: 992px){
+        padding-bottom: 50px;
+    }
+}
+.inside-img-container{
+    background-color: blue;
+    width:300px; 
+    height:300px;
+    object-fit: cover;
+    @media(min-width:992px){
+        width:400px;
+        height: 400px;
+    }
+}
+
+.btn-follow{
+    background-color: $green-accent;
+    color:white;
+    &:hover{
+        background-color: $green-accent-active;
+        color:white;
+    }
+}
+.aside-user-img{
+    width: 90px;
+    height: 90px;
+    background-repeat: none;
+}
+.email-btn{
+    background-color: $green-accent;
+    height: 38px; width: 38px;
+    &:hover{
+        background-color: $green-accent-active;
+    }
+}
+
+.btn-follow-1{
+    background-color: $green-accent;
+    color:white;
+    border:none;
+    width: 85vw;
+    &:hover{
+        background-color: $green-accent-active;
+        color:white;
+    }   
+}
